@@ -40,12 +40,12 @@ public class Labyrinth {
 
         for (int y = minY; y < maxY; y++) {
             for (int x = minX; x < maxX; x++) {
-                if (x == coordX && y == coordY) {
-                    subLabyrinth += "o";
-                } else if (struct[y][x] == 0) {
-                    subLabyrinth += " ";
-                } else {
+                if (y < 0 || y > struct.length || x < 0 || x > struct[0].length || struct[y][x] == 1) {
                     subLabyrinth += "#";
+                }else if (x == coordX && y == coordY) {
+                    subLabyrinth += "o";
+                } else {
+                    subLabyrinth += " ";
                 }
             }
             subLabyrinth += y != maxY-1 ? "\n" : "";
