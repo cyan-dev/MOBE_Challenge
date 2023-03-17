@@ -4,9 +4,12 @@ public class Ball {
     private short posX;
     private short posY;
 
+    private DetectMovementStrategy movementDetector;
+
     public Ball(short posX, short posY) {
         this.posX = posX;
         this.posY = posY;
+        this.movementDetector = new DetectAccel();
     }
 
     public void goUp() {
@@ -39,5 +42,13 @@ public class Ball {
 
     public void setPosY(short posY) {
         this.posY = posY;
+    }
+
+    public DetectMovementStrategy getMovementDetector() {
+        return movementDetector;
+    }
+
+    public void setMovementDetector(DetectMovementStrategy movementDetector) {
+        this.movementDetector = movementDetector;
     }
 }
