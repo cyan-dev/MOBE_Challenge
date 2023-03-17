@@ -41,9 +41,9 @@ public class Labyrinth {
         for (int y = minY; y < maxY; y++) {
             for (int x = minX; x < maxX; x++) {
                 if (y < 0 || y > struct.length || x < 0 || x > struct[0].length || struct[y][x] == 1) {
-                    subLabyrinth += "#";
+                    subLabyrinth += "X";
                 }else if (x == coordX && y == coordY) {
-                    subLabyrinth += "o";
+                    subLabyrinth += "O";
                 } else {
                     subLabyrinth += " ";
                 }

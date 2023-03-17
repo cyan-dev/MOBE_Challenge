@@ -1,10 +1,10 @@
 package fr.ut3.sdl.mobe.saucisse.lsdl.parts;
 
 public class Ball {
-    private short posX;
-    private short posY;
+    private int posX;
+    private int posY;
 
-    public Ball(short posX, short posY) {
+    public Ball(int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
     }
@@ -25,19 +25,19 @@ public class Ball {
         this.posX += 1;
     }
 
-    public short getPosX() {
+    public int getPosX() {
         return posX;
     }
 
-    public void setPosX(short posX) {
+    public void setPosX(int posX) {
         this.posX = posX;
     }
 
-    public short getPosY() {
+    public int getPosY() {
         return posY;
     }
 
-    public void setPosY(short posY) {
+    public void setPosY(int posY) {
         this.posY = posY;
     }
 }
