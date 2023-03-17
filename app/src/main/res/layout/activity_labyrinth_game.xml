@@ -8,19 +8,18 @@
 
     <TextView
         android:id="@+id/labyrinthText"
-        android:layout_width="730dp"
-        android:layout_height="366dp"
+        android:layout_width="868dp"
+        android:layout_height="418dp"
         android:fontFamily="monospace"
-        android:maxLength="20"
-        android:maxLines="5"
-        android:text="0XXXXXXXXXXXXXXXXXXX\n X\n X\n X\n X"
-        android:textSize="60sp"
+        android:maxLength="154"
+        android:text="0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/divider5"
         app:layout_constraintEnd_toStartOf="@+id/divider4"
-        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/divider3"
         app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.545" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/divider"
@@ -29,10 +28,10 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <View
         android:id="@+id/divider3"
@@ -52,7 +51,7 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.856"
+        app:layout_constraintHorizontal_bias="0.768"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -67,7 +66,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.911" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/timer"
@@ -75,13 +74,13 @@
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
         android:text="Timer : 300s"
-        android:textSize="60sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/labyrinthText"
         app:layout_constraintEnd_toStartOf="@+id/divider4"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/divider3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
