@@ -8,8 +8,7 @@ android {
 
     defaultConfig {
         applicationId "fr.ut3.sdl.mobe.saucisse.lsdl"
-        minSdk 31
-        targetSdk 33
+        minSdk 30
         versionCode 1
         versionName "1.0"
 
