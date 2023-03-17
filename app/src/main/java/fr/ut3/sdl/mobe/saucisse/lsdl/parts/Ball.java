@@ -1,54 +1,43 @@
 package fr.ut3.sdl.mobe.saucisse.lsdl.parts;
 
 public class Ball {
-    private int posX;
-    private int posY;
+    private int coordX;
+    private int coordY;
 
-    private DetectMovementStrategy movementDetector;
-
-    public Ball(int posX, int posY) {
-        this.posX = posX;
-        this.posY = posY;
-        this.movementDetector = new DetectAccel();
+    public Ball(int coordX, int coordY) {
+        this.coordX = coordX;
+        this.coordY = coordY;
     }
 
     public void goUp() {
-        this.posY -= 1;
+        this.coordY -= 1;
     }
 
     public void goDown() {
-        this.posY += 1;
+        this.coordY += 1;
     }
 
     public void goLeft() {
-        this.posX -= 1;
+        this.coordX -= 1;
     }
 
     public void goRight() {
-        this.posX += 1;
+        this.coordX += 1;
     }
 
-    public int getPosX() {
-        return posX;
+    public int getCoordX() {
+        return coordX;
     }
 
-    public void setPosX(int posX) {
-        this.posX = posX;
+    public void setCoordX(int coordX) {
+        this.coordX = coordX;
     }
 
-    public int getPosY() {
-        return posY;
+    public int getCoordY() {
+        return coordY;
     }
 
-    public void setPosY(int posY) {
-        this.posY = posY;
-    }
-
-    public DetectMovementStrategy getMovementDetector() {
-        return movementDetector;
-    }
-
-    public void setMovementDetector(DetectMovementStrategy movementDetector) {
-        this.movementDetector = movementDetector;
+    public void setCoordY(int coordY) {
+        this.coordY = coordY;
     }
 }
