@@ -11,8 +11,12 @@ import android.widget.TextView;
 
 import fr.ut3.sdl.mobe.saucisse.lsdl.parts.Ball;
 import fr.ut3.sdl.mobe.saucisse.lsdl.parts.Labyrinth;
+import fr.ut3.sdl.mobe.saucisse.lsdl.parts.OnSwipeTouchListener;
 
 public class LabyrinthGame extends AppCompatActivity {
+    private enum Strategy {
+        ACCEL, ACCEL_INV, SWIPE, SWIPE_INV
+    }
     public static final int COLUMN_NUMBER = 21;
     public static final int ROW_NUMBER = 7;
     public static final int BALL_STARTING_X = 0;
@@ -20,6 +24,7 @@ public class LabyrinthGame extends AppCompatActivity {
     private Labyrinth labyrinth;
     private Ball ball;
     private TextView labyrinthTextView;
+    private Strategy strategy = Strategy.SWIPE;
     private void displayLabyrinth(){
         String labyrinthString = labyrinth.transform(
                 ball.getPosX(), ball.getPosY(), COLUMN_NUMBER, ROW_NUMBER);
@@ -37,6 +42,47 @@ public class LabyrinthGame extends AppCompatActivity {
         labyrinthTextView = (TextView) this.findViewById(R.id.labyrinthText);
     }
 
+    private void setupSwipeListener() {
+        labyrinthTextView.setOnTouchListener(new OnSwipeTouchListener(this) {
+            @Override
+            public void onSwipeTop() {
+                super.onSwipeTop();
+                if (strategy == Strategy.SWIPE) {
+                    ball.goUp();
+                } else if (strategy == Strategy.SWIPE_INV) {
+                    ball.goDown();
+                }
+            }
+            @Override
+            public void onSwipeRight() {
+                super.onSwipeRight();
+                if (strategy == Strategy.SWIPE) {
+                    ball.goRight();
+                } else if (strategy == Strategy.SWIPE_INV) {
+                    ball.goLeft();
+                }
+            }
+            @Override
+            public void onSwipeBottom() {
+                super.onSwipeBottom();
+                if (strategy == Strategy.SWIPE) {
+                    ball.goDown();
+                } else if (strategy == Strategy.SWIPE_INV) {
+                    ball.goUp();
+                }
+            }
+            @Override
+            public void onSwipeLeft() {
+                super.onSwipeLeft();
+                if (strategy == Strategy.SWIPE) {
+                    ball.goLeft();
+                } else if (strategy == Strategy.SWIPE_INV) {
+                    ball.goRight();
+                }
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +90,8 @@ public class LabyrinthGame extends AppCompatActivity {
 
         setup();
         setupView();
+        setupSwipeListener();
+
 
         displayLabyrinth();
     }
