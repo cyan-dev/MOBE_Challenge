@@ -10,7 +10,10 @@
         android:id="@+id/labyrinthText"
         android:layout_width="868dp"
         android:layout_height="418dp"
+        android:fallbackLineSpacing="false"
         android:fontFamily="monospace"
+        android:lineSpacingExtra="-20sp"
+        android:lines="8"
         android:maxLength="154"
         android:text="0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n0XXXXXXXXXXXXXXXXXXXX\n"
         android:textSize="50sp"
@@ -66,7 +69,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.739" />
 
     <TextView
         android:id="@+id/timer"
